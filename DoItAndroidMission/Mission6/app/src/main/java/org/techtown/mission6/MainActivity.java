@@ -23,12 +23,12 @@ public class MainActivity extends AppCompatActivity {
         seekBar = findViewById(R.id.seekBar);
         textView = findViewById(R.id.textView);
 
+
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                String percentage = Integer.toString(progress);
                 progressBar.setProgress(progress);
-                textView.setText(percentage);
+                textView.setText(String.valueOf(progress));
             }
 
             @Override

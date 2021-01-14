@@ -25,15 +25,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void onFragmentChanged(int i) {
         if (i == 0) {
-            //tracnsaction은 여러개의 함수를 사용할떄
-            //
             getSupportFragmentManager().beginTransaction().remove(menuFragment);
             getSupportFragmentManager().beginTransaction().replace(R.id.container,mainFragment).commit();
-
         } else if (i == 1) {
             getSupportFragmentManager().beginTransaction().remove(mainFragment);
             getSupportFragmentManager().beginTransaction().replace(R.id.container, menuFragment).commit();
-
         }
     }
 }
